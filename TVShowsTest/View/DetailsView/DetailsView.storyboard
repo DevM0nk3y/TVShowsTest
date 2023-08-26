@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLp-Dm-phO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="VG2-VQ-IlF">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" modalPresentationStyle="fullScreen" id="dLp-Dm-phO" customClass="DetailsViewController" customModule="TVShowsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iy5-dw-M7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-9X-R84">
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                                <color key="barTintColor" red="0.63529411759999999" green="0.29471893300000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Favorite Shows" id="CCn-ux-fVA">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="hHS-O9-xbu">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="dLp-Dm-phO" id="K5s-Lu-EQm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Favorite" id="21L-Bl-B8e">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="favoriteButton:" destination="dLp-Dm-phO" id="bus-rz-ngf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZT-mN-krK">
+                                <rect key="frame" x="0.0" y="102" width="414" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="krq-So-lwS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI2-qe-KPB">
+                                <rect key="frame" x="20" y="338" width="51.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duracion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-Af-VLi">
+                                <rect key="frame" x="176" y="338" width="62" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-km-znw">
+                                <rect key="frame" x="329" y="338" width="65" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NuV-lT-HJ7"/>
+                                    <constraint firstAttribute="width" constant="65" id="Uvb-hV-Ama"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="IMDb">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="imdbButton:" destination="dLp-Dm-phO" eventType="touchUpInside" id="7oo-GO-bny"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-ID-qBK">
+                                <rect key="frame" x="20" y="405" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iC-jr-Pi2">
+                                <rect key="frame" x="32" y="446" width="350" height="284.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="tI3-W9-uqC"/>
+                                </constraints>
+                                <string key="text">Celebrating athletes and fans who give back to their communities making life better for so many, Game Changers, hosted by \"The Insider's\" Kevin Frazier, highlights professional athletes who use their public image to make positive changes in the lives of fans in need. Young reporters seek their stories from the field, and bring back journalistic gold to the Game Changers studios to culminate in heartfelt reflection and insight from the host. Whether on or off the field, Game Changers takes an inspirational look at how sports positively impact individuals and the communities they serve.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TkA-PD-Kim"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LqO-9X-R84" firstAttribute="top" secondItem="TkA-PD-Kim" secondAttribute="top" id="0hw-nS-3SN"/>
+                            <constraint firstItem="GZT-mN-krK" firstAttribute="leading" secondItem="TkA-PD-Kim" secondAttribute="leading" id="4gw-t5-kKq"/>
+                            <constraint firstItem="LqO-9X-R84" firstAttribute="leading" secondItem="TkA-PD-Kim" secondAttribute="leading" id="CMa-6g-9Mi"/>
+                            <constraint firstItem="Rt4-km-znw" firstAttribute="top" secondItem="GZT-mN-krK" secondAttribute="bottom" constant="76" id="DTd-ln-zxM"/>
+                            <constraint firstItem="gE3-ID-qBK" firstAttribute="top" secondItem="TI2-qe-KPB" secondAttribute="bottom" constant="50" id="Nzi-cI-XY0"/>
+                            <constraint firstItem="GZT-mN-krK" firstAttribute="trailing" secondItem="TkA-PD-Kim" secondAttribute="trailing" id="R2p-KJ-Ft1"/>
+                            <constraint firstItem="LqO-9X-R84" firstAttribute="trailing" secondItem="TkA-PD-Kim" secondAttribute="trailing" id="UlV-iO-HYx"/>
+                            <constraint firstItem="TI2-qe-KPB" firstAttribute="leading" secondItem="TkA-PD-Kim" secondAttribute="leading" constant="20" id="WP7-6H-CFh"/>
+                            <constraint firstItem="TI2-qe-KPB" firstAttribute="top" secondItem="GZT-mN-krK" secondAttribute="bottom" constant="76" id="atv-zB-PBo"/>
+                            <constraint firstItem="1iC-jr-Pi2" firstAttribute="top" secondItem="gE3-ID-qBK" secondAttribute="bottom" constant="20" id="bty-uI-uXp"/>
+                            <constraint firstItem="6QU-Af-VLi" firstAttribute="centerX" secondItem="GZT-mN-krK" secondAttribute="centerX" id="gDg-HO-xJ2"/>
+                            <constraint firstItem="GZT-mN-krK" firstAttribute="top" secondItem="LqO-9X-R84" secondAttribute="bottom" constant="10" id="hN1-1o-42X"/>
+                            <constraint firstItem="gE3-ID-qBK" firstAttribute="leading" secondItem="TkA-PD-Kim" secondAttribute="leading" constant="20" id="kZU-yP-TV3"/>
+                            <constraint firstItem="6QU-Af-VLi" firstAttribute="top" secondItem="GZT-mN-krK" secondAttribute="bottom" constant="76" id="r08-9T-EBa"/>
+                            <constraint firstItem="TkA-PD-Kim" firstAttribute="trailing" secondItem="Rt4-km-znw" secondAttribute="trailing" constant="20" id="xCX-j8-CVv"/>
+                            <constraint firstItem="1iC-jr-Pi2" firstAttribute="centerX" secondItem="iy5-dw-M7F" secondAttribute="centerX" id="xly-5X-K8I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerShowImage" destination="GZT-mN-krK" id="glR-8a-lFP"/>
+                        <outlet property="favoriteButton" destination="21L-Bl-B8e" id="u39-Gg-jx3"/>
+                        <outlet property="genreLabel" destination="TI2-qe-KPB" id="kRV-jn-s1k"/>
+                        <outlet property="imdbButton" destination="Rt4-km-znw" id="Izf-no-SzX"/>
+                        <outlet property="runTimeLabel" destination="6QU-Af-VLi" id="ZtR-WX-2wr"/>
+                        <outlet property="sumaryLabel" destination="1iC-jr-Pi2" id="cAE-1n-reC"/>
+                        <outlet property="titleNavBar" destination="CCn-ux-fVA" id="QVJ-8g-u4b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Oj-5Q-upJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

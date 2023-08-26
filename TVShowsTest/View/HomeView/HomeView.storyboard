@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SvQ-1Y-3gL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="1LE-ho-Zh1">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="V7F-g4-Oqs" customClass="FavoritesViewController" customModule="TVShowsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x2L-xz-orB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t00-8q-SXO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                                <color key="barTintColor" red="0.63529411759999999" green="0.29471893300000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Favorite Shows" id="WBU-94-PFV"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-L0-UNt">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="143" id="qzO-ce-vwT" customClass="TVShowsTableViewCell" customModule="TVShowsTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qzO-ce-vwT" id="41H-oe-ZSd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NBA-4T-2rK">
+                                                    <rect key="frame" x="20" y="16.5" width="85" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="uiY-cf-ara"/>
+                                                        <constraint firstAttribute="width" constant="85" id="xVh-j9-u5y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="57d-w7-S80">
+                                                    <rect key="frame" x="384" y="63.5" width="20" height="16.5"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="A4K-ag-Yi2"/>
+                                                        <constraint firstAttribute="height" constant="20" id="C2M-qT-w9N"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Changers with Kevin Frazier Presented by EA Sports" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFk-Tc-fgK">
+                                                    <rect key="frame" x="125" y="32" width="220" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="220" id="OKe-uc-5eh"/>
+                                                        <constraint firstAttribute="height" constant="79" id="pCq-eI-fwo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pFk-Tc-fgK" firstAttribute="leading" secondItem="NBA-4T-2rK" secondAttribute="trailing" constant="20" id="59F-2O-6JE"/>
+                                                <constraint firstItem="NBA-4T-2rK" firstAttribute="centerY" secondItem="41H-oe-ZSd" secondAttribute="centerY" id="If2-hG-gvw"/>
+                                                <constraint firstItem="pFk-Tc-fgK" firstAttribute="centerY" secondItem="41H-oe-ZSd" secondAttribute="centerY" id="Jlb-GO-rlK"/>
+                                                <constraint firstItem="NBA-4T-2rK" firstAttribute="leading" secondItem="41H-oe-ZSd" secondAttribute="leading" constant="20" id="cU9-Uj-Gb0"/>
+                                                <constraint firstAttribute="trailing" secondItem="57d-w7-S80" secondAttribute="trailing" constant="10" id="pyp-pZ-RHO"/>
+                                                <constraint firstItem="57d-w7-S80" firstAttribute="centerY" secondItem="41H-oe-ZSd" secondAttribute="centerY" id="uRh-FQ-WRy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="pFk-Tc-fgK" id="3hF-Og-LWH"/>
+                                            <outlet property="tvShowImage" destination="NBA-4T-2rK" id="JiI-FE-Z3h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="V7F-g4-Oqs" id="GbF-8q-G47"/>
+                                    <outlet property="delegate" destination="V7F-g4-Oqs" id="Eoh-jJ-h3Y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mTQ-I3-ecG"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t00-8q-SXO" firstAttribute="trailing" secondItem="mTQ-I3-ecG" secondAttribute="trailing" id="70Z-cd-HZV"/>
+                            <constraint firstItem="Fxz-L0-UNt" firstAttribute="bottom" secondItem="mTQ-I3-ecG" secondAttribute="bottom" id="Hdf-th-Hzw"/>
+                            <constraint firstItem="Fxz-L0-UNt" firstAttribute="trailing" secondItem="mTQ-I3-ecG" secondAttribute="trailing" id="SJn-n5-rcZ"/>
+                            <constraint firstItem="Fxz-L0-UNt" firstAttribute="leading" secondItem="mTQ-I3-ecG" secondAttribute="leading" id="mXT-ND-OkL"/>
+                            <constraint firstItem="t00-8q-SXO" firstAttribute="leading" secondItem="mTQ-I3-ecG" secondAttribute="leading" id="pzU-kd-i8l"/>
+                            <constraint firstItem="t00-8q-SXO" firstAttribute="top" secondItem="mTQ-I3-ecG" secondAttribute="top" id="voF-pA-TMc"/>
+                            <constraint firstItem="Fxz-L0-UNt" firstAttribute="top" secondItem="t00-8q-SXO" secondAttribute="bottom" id="yKo-Ra-FUU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="ANc-WP-GBY"/>
+                    <connections>
+                        <outlet property="tableView" destination="Fxz-L0-UNt" id="btV-94-U0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ku4-gT-9Mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="208"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="EWp-de-eAM">
+            <objects>
+                <viewController storyboardIdentifier="TVShowsViewController" id="Vbv-HC-MT7" customClass="TVShowsViewController" customModule="TVShowsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xcj-ha-zuI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmE-Sf-p4Y">
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                                <color key="barTintColor" red="0.63529411759999999" green="0.29471893300000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="TV Shows" id="bFf-13-oUD"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oi3-ra-h2N">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="143" id="k52-4w-1cl" customClass="TVShowsTableViewCell" customModule="TVShowsTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k52-4w-1cl" id="eHM-dt-YwG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYL-jz-Mr2">
+                                                    <rect key="frame" x="20" y="16.5" width="85" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="6Pk-Xr-SjW"/>
+                                                        <constraint firstAttribute="height" constant="110" id="CLv-TO-PT1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ooe-Ys-E0Q">
+                                                    <rect key="frame" x="384" y="63.5" width="20" height="16.5"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="BGr-yW-vTm"/>
+                                                        <constraint firstAttribute="height" constant="20" id="a2O-hc-n23"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Changers with Kevin Frazier Presented by EA Sports" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-hv-ixi">
+                                                    <rect key="frame" x="125" y="32" width="220" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="220" id="6p7-eo-Mdx"/>
+                                                        <constraint firstAttribute="height" constant="79" id="RCb-mb-5vX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mYL-jz-Mr2" firstAttribute="centerY" secondItem="eHM-dt-YwG" secondAttribute="centerY" id="YfD-LT-Bvb"/>
+                                                <constraint firstItem="fcg-hv-ixi" firstAttribute="centerY" secondItem="eHM-dt-YwG" secondAttribute="centerY" id="evS-XG-gTs"/>
+                                                <constraint firstAttribute="trailing" secondItem="ooe-Ys-E0Q" secondAttribute="trailing" constant="10" id="p6V-6D-Def"/>
+                                                <constraint firstItem="mYL-jz-Mr2" firstAttribute="leading" secondItem="eHM-dt-YwG" secondAttribute="leading" constant="20" id="res-sE-xmb"/>
+                                                <constraint firstItem="fcg-hv-ixi" firstAttribute="leading" secondItem="mYL-jz-Mr2" secondAttribute="trailing" constant="20" id="wid-7p-FsO"/>
+                                                <constraint firstItem="ooe-Ys-E0Q" firstAttribute="centerY" secondItem="eHM-dt-YwG" secondAttribute="centerY" id="z4l-lU-k0B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="fcg-hv-ixi" id="9H0-gU-6tO"/>
+                                            <outlet property="tvShowImage" destination="mYL-jz-Mr2" id="wV2-BJ-Upi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vbv-HC-MT7" id="5zX-GL-SiP"/>
+                                    <outlet property="delegate" destination="Vbv-HC-MT7" id="KSq-Gm-Xvi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jy0-Vp-dTm"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oi3-ra-h2N" firstAttribute="leading" secondItem="Jy0-Vp-dTm" secondAttribute="leading" id="5zR-zc-wMN"/>
+                            <constraint firstItem="oi3-ra-h2N" firstAttribute="top" secondItem="BmE-Sf-p4Y" secondAttribute="bottom" id="6gx-rI-R23"/>
+                            <constraint firstItem="oi3-ra-h2N" firstAttribute="trailing" secondItem="Jy0-Vp-dTm" secondAttribute="trailing" id="OXN-16-RQp"/>
+                            <constraint firstItem="BmE-Sf-p4Y" firstAttribute="leading" secondItem="Jy0-Vp-dTm" secondAttribute="leading" id="Pa9-4P-mpG"/>
+                            <constraint firstItem="BmE-Sf-p4Y" firstAttribute="trailing" secondItem="Jy0-Vp-dTm" secondAttribute="trailing" id="TuH-WD-1SB"/>
+                            <constraint firstItem="oi3-ra-h2N" firstAttribute="bottom" secondItem="Jy0-Vp-dTm" secondAttribute="bottom" id="U42-Y9-Esv"/>
+                            <constraint firstItem="BmE-Sf-p4Y" firstAttribute="top" secondItem="Jy0-Vp-dTm" secondAttribute="top" id="sQn-Xp-yUT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TV Shows" image="tv.fill" catalog="system" id="9bF-Wv-RKW"/>
+                    <connections>
+                        <outlet property="tableView" destination="oi3-ra-h2N" id="JQs-EK-B8o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRg-CB-qfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="-451"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xoh-oJ-uQ7">
+            <objects>
+                <tabBarController id="SvQ-1Y-3gL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qzb-Wp-w4W">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.63529411764705879" green="0.29411764705882354" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vbv-HC-MT7" kind="relationship" relationship="viewControllers" id="HBz-Hu-9Y8"/>
+                        <segue destination="V7F-g4-Oqs" kind="relationship" relationship="viewControllers" id="FXl-09-ds3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJm-w3-OYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="-142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="tv.fill" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
